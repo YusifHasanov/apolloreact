@@ -10,7 +10,6 @@ import {LayoutContext} from "../../layout/context/layoutcontext";
 import _default from "chart.js/dist/plugins/plugin.tooltip";
 import backgroundColor = _default.defaults.backgroundColor;
 import {Footer, Header, LogoSvg} from "@/app/components";
-
 const LandingPage: Page = () => {
     const [darkMode, setDarkMode] = useState(false);
     const {layoutConfig} = useContext(LayoutContext);
@@ -26,6 +25,7 @@ const LandingPage: Page = () => {
 
     return (
         <div className="relative overflow-hidden flex flex-column justify-content-center">
+            
             <div
                 className="bg-circle opacity-50"
                 style={{top: "-200px", left: "-700px"}}
@@ -47,9 +47,9 @@ const LandingPage: Page = () => {
                     >
                         <div
                             className="col-12 md:col-4 flex flex-column gap-4 flex-order-1 md:flex-order-0 align-items-center md:align-items-start text-center md:text-left">
-                            <span className="block text-900 font-bold text-4xl">
-                                Organisme de Décentralisation Mondiale
-                            </span>
+                            <Link href={"/dashboard-commerce"}  className="block text-900 font-bold text-4xl">
+                                Dashboard
+                            </Link>
                             <span className="block text-700 text-lg">
                                 Protecteur de la blockchain, promoteur de la décentralisation, éclairant le chemin vers un avenir numérique équitable et libre.
                             </span>
